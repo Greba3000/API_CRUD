@@ -8,4 +8,6 @@ def is_available_type(info_json: dict) -> bool:
 
 def is_response_status_good(resp):
     if resp.ok:
-        print('Request completed successfully.')
+        print(f'Request completed successfully. Status code is - {resp.status_code}.')
+    else:
+        print(f'Something is wrong. Status code is - {resp.status_code}.')
